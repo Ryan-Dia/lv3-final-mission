@@ -65,7 +65,7 @@ jobs:
       - name: Docker 이미지 Pull
         run: |
           IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/final-mission-prod:latest
-          docker pull $IMAGE
+          /usr/bin/sudo docker pull $IMAGE
 
       - name: 이미지 변경 여부 확인
         id: compare_digest
