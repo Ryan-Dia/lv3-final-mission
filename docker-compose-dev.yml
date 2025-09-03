@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  final-mission-dev:
+    image: ryandia/final-mission-dev:latest
+    container_name: final-mission-dev
+    ports:
+      - "8080:8080"
+    environment:
+      LOGGING_FILE_NAME: /logs/final-mission-dev.log
+
+    restart: always
